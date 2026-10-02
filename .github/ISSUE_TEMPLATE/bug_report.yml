@@ -1,0 +1,74 @@
+name: Bug report
+description: Something in Scaffolde Relay or Connect is broken, crashes, or behaves wrongly.
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public.** Do not paste API keys, tokens, pairing codes,
+        email addresses, private code, or chat contents. Write `~/…` instead of paths
+        that contain your username.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it happen?
+      options:
+        - Desktop app (macOS)
+        - Desktop app (Windows)
+        - Desktop app (Linux)
+        - Web (app.scaffolde.ai)
+        - iOS app
+        - Scaffolde Connect / pairing
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Scaffolde Relay
+        2. Click …
+        3. See …
+
+  - type: input
+    id: version
+    attributes:
+      label: Relay version
+      description: Settings → About.
+      placeholder: 0.0.44
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system
+      placeholder: macOS 27.0, Windows 11, Ubuntu 26.04, iOS 27
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or log lines (redacted)
+      description: Only what is needed. Check them for keys, names and paths first.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed keys, tokens, pairing codes, personal details and private code from this report.
+          required: true

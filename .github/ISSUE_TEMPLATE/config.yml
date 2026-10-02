@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private report (contains details you cannot post publicly)
+    url: mailto:pai@scaffolde.ai
+    about: Email us instead of posting keys, personal data or private code here.

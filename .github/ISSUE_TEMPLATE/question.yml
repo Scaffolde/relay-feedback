@@ -1,0 +1,28 @@
+name: Question
+description: Not sure how something in Relay or Connect works? Ask here.
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public.** Please keep personal details and private code out of it.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What you have tried
+      description: Optional. Where you looked and what happened.
+
+  - type: input
+    id: version
+    attributes:
+      label: Relay version (optional)
+      placeholder: 0.0.44

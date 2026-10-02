@@ -1,0 +1,44 @@
+name: Feedback
+description: Something is confusing, missing, or could be better.
+labels:
+  - feedback
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public.** Please keep personal details and private code out of it.
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your feedback
+      description: What felt confusing, slow or missing, and what you were trying to do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: ideal
+    attributes:
+      label: What would have helped?
+      description: Optional. How you would have expected it to work.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Area
+      options:
+        - Installing or updating
+        - Onboarding and sign-in
+        - Scaffolde Connect / pairing
+        - Coding agents (Claude, Codex, …)
+        - Threads and chat
+        - Notifications
+        - iOS app
+        - Web (app.scaffolde.ai)
+        - Something else
+
+  - type: input
+    id: version
+    attributes:
+      label: Relay version (optional)
+      placeholder: 0.0.44
